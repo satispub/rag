@@ -1,0 +1,166 @@
+FINANCIAL BANK — HOME LOAN AND MORTGAGE APPLICATION RAG KNOWLEDGE BASE |
+FAQ DOCUMENT Document purpose: Answer common customer questions about
+applying for a home loan or mortgage. Scope note: This is general
+informational content for a fictional financial institution. Mortgage
+products, eligibility, rates, fees, down-payment requirements,
+timelines, and documentation vary by lender, borrower, property, and
+jurisdiction. This document is not a credit decision, loan offer, legal
+advice, or financial advice.
+
+Q1. How do I apply for a home loan or mortgage? A: Customers can usually
+begin through the lender’s website, a mortgage loan officer, or a branch
+if mortgage services are offered there. The process typically includes
+an initial inquiry, application, document submission, credit and income
+review, property evaluation, underwriting, and closing if approved. The
+lender will explain its current process and requirements.
+
+Q2. What information is needed for a mortgage application? A: Applicants
+are commonly asked for identity and contact information, employment and
+income details, assets, existing debts, information about the property,
+and permission for required credit checks. Co-borrowers may need to
+provide similar information. Exact requirements depend on the loan
+program and lender.
+
+Q3. What documents should I prepare? A: Commonly requested documents may
+include recent pay statements, W-2s or tax returns, bank or investment
+statements, identification, employment details, records of other debts,
+and purchase-contract information when buying a home. Self-employed
+applicants may need additional income and business records. The lender
+will provide a tailored document checklist.
+
+Q4. What is mortgage prequalification? A: Prequalification is an early
+estimate of potential borrowing capacity based on information the
+applicant provides and the lender’s process. It may be less detailed
+than preapproval and is not a final loan commitment. Customers should
+ask the lender what checks were completed and what the result does—and
+does not—confirm.
+
+Q5. What is mortgage preapproval? A: Preapproval is a preliminary
+assessment of a borrower’s ability to qualify, often involving review of
+financial information and a credit check. It is not a guarantee of final
+approval. Final approval can depend on verification of documents,
+underwriting, the property’s appraisal, title review, and other
+conditions.
+
+Q6. What credit score do I need? A: Minimum credit-score requirements
+vary by lender and loan program, and a score alone does not determine
+approval. Lenders may also assess credit history, income, debts, assets,
+down payment, and property details. The customer should ask the lender
+which programs may fit their circumstances.
+
+Q7. How much down payment do I need? A: The required down payment
+depends on the loan program, property, occupancy, borrower
+qualifications, and lender requirements. Some programs may allow lower
+down payments, while others may require more. A lower down payment can
+affect monthly costs and may result in mortgage insurance or other
+requirements. The lender should confirm applicable terms.
+
+Q8. What mortgage interest rates are available? A: Mortgage rates change
+over time and depend on factors such as the loan type, term, market
+conditions, credit profile, down payment, property, and whether the rate
+is locked. The chatbot must not quote a rate unless it comes from an
+approved, current lender source and includes relevant assumptions and
+timing. Customers should request a current Loan Estimate or official
+rate quote.
+
+Q9. What is the difference between a fixed-rate and adjustable-rate
+mortgage? A: With a fixed-rate mortgage, the interest rate generally
+stays the same for the agreed loan term. With an adjustable-rate
+mortgage, the rate may change according to the loan’s terms and index
+after any initial fixed period. Payment changes and caps depend on the
+specific product documents, which customers should review carefully.
+
+Q10. What is the difference between principal, interest, taxes, and
+insurance? A: Principal is the amount borrowed that is repaid over time.
+Interest is the cost of borrowing. A monthly housing payment may also
+include property taxes, homeowners insurance, mortgage insurance, and
+applicable association dues or escrow items. The exact payment
+components depend on the loan and property.
+
+Q11. What is debt-to-income ratio (DTI)? A: Debt-to-income ratio
+compares qualifying monthly debt payments with qualifying gross monthly
+income, as calculated by the lender. Lenders use DTI as one factor in
+assessing repayment ability, alongside credit, assets, loan terms, and
+other criteria. Calculation rules and acceptable thresholds vary by
+program.
+
+Q12. What fees can come with a mortgage? A: Mortgage costs may include
+application or origination charges, appraisal, credit report, title
+services, recording charges, prepaid taxes and insurance, and other
+closing costs. Some fees may be paid upfront and others at closing. The
+lender should provide required disclosures, including a Loan Estimate
+when applicable, so customers can review estimated costs.
+
+Q13. How long does mortgage approval take? A: Timing varies based on the
+completeness of the application, verification needs, property appraisal,
+title work, underwriting workload, and the transaction’s circumstances.
+The lender can provide an estimate for the specific application. The
+chatbot should not guarantee a closing or approval date.
+
+Q14. What is an appraisal, and why is it required? A: An appraisal is an
+assessment of a property’s value for the lender’s purposes. It helps the
+lender evaluate the property as collateral and may affect loan terms or
+approval. The appraisal process and options for addressing a valuation
+difference depend on the lender, loan program, and applicable rules.
+
+Q15. Can I apply with a co-borrower? A: Many mortgage programs allow
+eligible co-borrowers, but the lender determines who can apply and what
+documentation is required. A co-borrower’s income, debts, credit
+history, and other financial details may be considered under the
+program’s rules.
+
+Q16. Can I apply if I am self-employed? A: Self-employed applicants may
+be eligible, subject to the lender’s underwriting requirements. They may
+need to provide additional tax returns, profit-and-loss statements,
+business records, or other evidence of stable qualifying income. The
+lender will specify which documents are required.
+
+Q17. What happens after I submit the application? A: The lender
+generally reviews the application, requests supporting documents,
+evaluates credit and repayment ability, orders or reviews
+property-related services, and completes underwriting. The applicant may
+receive requests for additional information. A final decision and any
+conditions are communicated by the lender.
+
+Q18. What is a Loan Estimate? A: In many U.S. mortgage transactions, a
+Loan Estimate is a standardized disclosure that summarizes key loan
+terms, projected payments, and estimated closing costs. It is not the
+same as final approval. Customers should review the document carefully
+and ask the lender to explain any terms or fees they do not understand.
+
+Q19. What is mortgage insurance? A: Mortgage insurance may protect the
+lender against certain losses if a borrower does not repay the loan.
+Whether it is required, how much it costs, and when it can be cancelled
+or ends depend on the loan type, down payment, applicable rules, and
+loan documents. It is different from homeowners insurance, which
+protects against covered property losses.
+
+Q20. What if I cannot provide one of the requested documents? A: The
+applicant should tell the mortgage team which document is unavailable
+and ask whether an alternative is acceptable. Requirements depend on the
+lender and loan program. The chatbot must not advise the customer to
+alter, omit, or misrepresent information.
+
+Q21. Does submitting an application guarantee approval? A:
+No. Submitting an application does not guarantee approval or a
+particular rate or loan amount. Approval is subject to the lender’s
+underwriting, verification, property review, program requirements, and
+any required conditions.
+
+Q22. How can I protect my personal information during the mortgage
+process? A: Submit documents only through the lender’s verified secure
+portal or another channel the lender confirms is approved. Do not send
+passwords, PINs, or one-time passcodes in chat or email. Verify
+unexpected requests by contacting the lender through an official phone
+number or website.
+
+CHATBOT RESPONSE RULES - Provide general education only; do not promise
+loan approval, a rate, a payment amount, a loan limit, or a closing
+date. - Do not make a credit decision or infer eligibility from
+incomplete information. - For personalized estimates, rates, fees,
+required documents, and application status, direct the customer to the
+lender’s current disclosures, secure mortgage portal, or loan officer. -
+Never request passwords, PINs, one-time passcodes, or unnecessary
+sensitive personal information in chat. - If a customer is in a live
+application, encourage them to use the lender’s approved secure channel
+to share documents.

@@ -1,0 +1,85 @@
+================================================================================
+
+TROUBLESHOOTING DELEGATE ENROLLMENT ISSUES
+
+================================================================================
+
+
+
+SUMMARY & QUICK TROUBLESHOOTING (2-LINE GUIDE)
+
+--------------------------------------------------------------------------------
+
+1. To troubleshoot enrollment or duplicate delegate errors, verify if the MD ID/Del ID is already registered under the business, then attempt removal if necessary.
+
+2. If addition or deletion fails, capture the exact error message with a full-screen screenshot and log an automated support ticket in ServiceNow.
+
+
+
+--------------------------------------------------------------------------------
+
+QUESTIONS AND ANSWERS
+
+--------------------------------------------------------------------------------
+
+
+
+Q1: What is the primary cause when a Controlling Party cannot add a new user as a Delegate using their MD ID or Del ID?
+
+A1: The primary cause is typically a duplicate record error, indicating that the MD ID or Del ID is already registered as an active or pending Delegate in the system for that business.
+
+
+
+Q2: How should a Controlling Party verify if a Delegate already exists in the system before attempting a new enrollment?
+
+A2: The Controlling Party should check the current "Manage Delegates" roster within the portal to see if the MD ID or Del ID is already linked to the business account.
+
+
+
+Q3: What action should be taken if the system throws an error stating "Duplicate Delegate Already Exists"?
+
+A3: Review the existing user list; if the entry is outdated or incorrect, delete the existing Delegate profile first before attempting to re-enroll the user with the MD ID or Del ID.
+
+
+
+Q4: What step must be taken if the system fails to delete an existing duplicate Delegate?
+
+A4: If the deletion process fails, note down the specific error code, take a screenshot of the failure message, and escalate the issue to IT support.
+
+
+
+Q5: When should an automated or manual ticket be created in ServiceNow for a Delegate Enrollment issue?
+
+A5: A ServiceNow ticket should be created whenever an unhandled system error occurs during Delegate addition/deletion, or when duplicate record cleanup fails.
+
+
+
+Q6: What details must be included in the ServiceNow ticket when reporting a Delegate Enrollment failure?
+
+A6: The ticket must include the Business ID, Controlling Party details, the target MD ID / Del ID, exact steps to reproduce, the error message text, and attached screenshots.
+
+
+
+Q7: What should be verified if an MD ID or Del ID is not recognized during the addition process?
+
+A7: Ensure that the MD ID or Del ID was entered correctly without typos or extra spaces, and verify that the ID profile is fully active in the master identity database.
+
+
+
+Q8: Can a single user (MD ID/Del ID) be assigned as a Delegate to multiple businesses?
+
+A8: Yes, depending on system permissions, but they cannot be added twice under the exact same business profile without causing a duplicate error.
+
+
+
+Q9: What is the expected behavior after successfully deleting a duplicate Delegate profile?
+
+A9: The roster should refresh to remove the old record, allowing the Controlling Party to immediately re-enroll the user using their correct MD ID or Del ID.
+
+
+
+Q10: What is the standard escalation path if an auto-created ServiceNow ticket does not resolve the Delegate enrollment error?
+
+A10: The ticket should be escalated to Level 2 Identity and Access Management (IAM) support or the System Administrator team with the diagnostic logs attached.
+
+================================================================================

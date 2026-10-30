@@ -1,0 +1,119 @@
+FINANCIAL BANK — CHECKING AND SAVINGS ACCOUNTS RAG KNOWLEDGE BASE | FAQ
+DOCUMENT Document purpose: Answer common customer questions about
+opening and managing checking and savings accounts. Scope note: This is
+general informational content for a fictional financial institution.
+Exact eligibility, fees, rates, limits, and processing times depend on
+the bank’s current policies and disclosures. The chatbot must not invent
+missing terms; it should direct customers to the bank’s official
+disclosures or a representative.
+
+Q1. What is the difference between a checking account and a savings
+account? A: A checking account is generally designed for frequent
+transactions such as paying bills, receiving direct deposits, and using
+a debit card. A savings account is generally intended for setting money
+aside and may earn interest. Features, rates, fees, and transaction
+limits vary by account and bank.
+
+Q2. How can I open a new checking or savings account? A: Customers can
+typically apply through the bank’s website, mobile app, or a branch,
+depending on available services. The customer completes an application,
+provides requested identity and contact information, reviews the account
+terms, and submits the application. The bank may request additional
+information before opening the account.
+
+Q3. What information or documents do I need to open an account? A: The
+bank may ask for a legal name, date of birth, residential address,
+contact details, taxpayer identification number, and an acceptable
+government-issued identification document. Additional documents may be
+required based on the customer’s circumstances and applicable law.
+Customers should check the bank’s official requirements before applying.
+
+Q4. Who is eligible to open an account? A: Eligibility depends on the
+account type, the applicant’s age, identity-verification results,
+residency, and the bank’s policies. Some applicants under the age of
+majority may need a parent or guardian and a special account type. The
+bank makes the final eligibility determination.
+
+Q5. Is there a minimum opening deposit? A: Minimum opening deposits
+differ by account type and bank policy. Some accounts may have no
+minimum opening deposit, while others may require one. The customer
+should review the current account disclosure or ask a bank
+representative; the chatbot must not state a specific amount unless it
+is available in an approved source.
+
+Q6. Are there monthly maintenance fees? A: Some accounts charge a
+monthly maintenance fee, while others waive it or offer ways to avoid
+it, such as maintaining a qualifying balance or receiving eligible
+direct deposits. Fee amounts and waiver conditions vary. Customers
+should review the current fee schedule and account terms.
+
+Q7. How do I fund my new account? A: Depending on the bank’s supported
+services, customers may fund an account by transferring money from
+another account, making an eligible deposit at a branch or ATM, setting
+up direct deposit, or using another approved funding method.
+Availability and limits vary by channel.
+
+Q8. How do I set up direct deposit? A: Customers generally provide their
+employer or benefits provider with the bank’s routing number and their
+account number, or use an official direct-deposit form if available.
+Customers should obtain account details securely through the bank’s
+authenticated website, mobile app, or branch. Never share online banking
+passwords or one-time verification codes.
+
+Q9. Will I receive a debit card with my checking account? A: A debit
+card may be available with eligible checking accounts. The bank’s
+process for issuing, activating, replacing, and delivering a card
+depends on its policies. Customers should confirm whether a card is
+included and how to activate it through official bank channels.
+
+Q10. Can I open an account online? A: Online account opening may be
+available for eligible applicants. The process can require electronic
+identity verification and may not be available for every customer or
+account type. If the application cannot be completed online, the
+customer should follow the instructions shown or contact the bank.
+
+Q11. How long does it take to open an account? A: Some applications may
+be reviewed quickly, while others require additional verification or
+documents. Processing time depends on the application and the bank’s
+procedures. The chatbot should not promise a specific approval time
+unless an approved, current bank source states one.
+
+Q12. Can I open both a checking and a savings account? A: A customer may
+be able to open both account types, subject to eligibility and the
+bank’s account-opening rules. The customer can compare each account’s
+features, fees, minimums, and interest terms before applying.
+
+Q13. How can I find my routing and account numbers? A: Customers can
+usually find these details in the bank’s authenticated online banking or
+mobile app, on eligible account documents, or by contacting the bank
+through an official channel. The chatbot should not request the
+customer’s full account number or other sensitive information in an
+unsecured chat.
+
+Q14. What happens if my application is not approved immediately? A: The
+bank may need more information or additional identity verification.
+Customers should follow the instructions provided by the bank and
+contact official support if they need clarification. The chatbot must
+not speculate about the reason for a pending or declined application.
+
+Q15. Are deposits insured? A: Deposit insurance depends on the
+institution, account ownership category, and applicable jurisdiction. In
+the United States, customers should verify whether the institution is
+FDIC-insured and review FDIC coverage rules using official FDIC
+resources or the bank’s disclosures. The chatbot must not promise
+coverage without confirming the institution and account details.
+
+Q16. How can I avoid scams while opening an account? A: Apply only
+through the bank’s verified website, official mobile app, or a branch.
+Do not share passwords, PINs, or one-time passcodes with anyone who
+contacts you. If a message or call seems suspicious, contact the bank
+using the phone number on its official website or card.
+
+CHATBOT RESPONSE RULES - Treat this document as general guidance, not as
+a substitute for current account disclosures. - Do not invent interest
+rates, fee amounts, deposit minimums, eligibility rules, transaction
+limits, or processing times. - For account-specific or
+application-status questions, direct the customer to authenticated bank
+channels or a bank representative. - Never ask the customer to provide
+passwords, PINs, one-time passcodes, or full sensitive account details
+in chat.

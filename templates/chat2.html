@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Secure Banking - Customer Support Bot</title>
+<style>
+:root {
+  --navy: #253746;
+  --blue: #1769aa;
+  --bg: #f4f7fa;
+  --border: #dce3e9;
+  --text: #263746;
+}
+
+* { box-sizing: border-box; }
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text);
+  overflow-x: hidden;
+  background-color: var(--bg);
+}
+
+.page-background {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('/static/background.png');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.logo-overlay {
+  position: absolute;
+  top: 13px;
+  left: 240px;
+  width: 160px;
+  height: 92px;
+  background-color: #253746;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 10px;
+  z-index: 10;
+}
+
+.logo-overlay .bank-icon { font-size: 18px; }
+.logo-overlay .bank-name { color: white; font-weight: 700; font-size: 14px; letter-spacing: 0.5px; }
+
+.chat-launcher {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9999;
+  border: 0;
+  border-radius: 28px;
+  padding: 15px 22px;
+  background: var(--navy);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 22px rgba(23, 43, 59, 0.25);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.chat-launcher:hover { background: #1e2d38; transform: translateY(-2px); }
+
+.chat-panel {
+  position: fixed;
+  right: 24px;
+  bottom: 90px;
+  z-index: 9999;
+  display: none;
+  flex-direction: column;
+  width: min(420px, calc(100vw - 28px));
+  height: min(640px, calc(100dvh - 120px));
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 44px rgba(23, 43, 59, 0.2);
+}
+
+.chat-panel.open { display: flex; }
+
+.chat-header {
+  background: var(--navy);
+  color: white;
+  padding: 17px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.agent { display: flex; align-items: center; gap: 11px; }
+.agent-icon { width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; background: rgba(255, 255, 255, 0.15); font-size: 18px; }
+.agent-title { font-weight: 650; font-size: 15px; }
+.secure-status { font-size: 12px; opacity: 0.85; margin-top: 3px; }
+
+.close-chat { border: 0; background: transparent; color: white; font-size: 24px; cursor: pointer; padding: 4px 8px; }
+.close-chat:hover { opacity: 0.8; }
+
+.messages {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 18px 14px;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.message {
+  max-width: 90%;
+  padding: 11px 14px;
+  border-radius: 13px;
+  font-size: 14px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.bot { align-self: flex-start; background: white; border: 1px solid var(--border); border-bottom-left-radius: 4px; }
+.user { align-self: flex-end; background: var(--blue); color: white; border-bottom-right-radius: 4px; }
+
+.message.bot.typing {
+  font-style: italic;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.typing-dots {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.typing-dots span {
+  width: 6px;
+  height: 6px;
+  background-color: var(--blue);
+  border-radius: 50%;
+  display: inline-block;
+  animation: typing-bounce 1.4s infinite ease-in-out both;
+}
+
+.typing-dots span:nth-child(1) { animation-delay: -0.32s; }
+.typing-dots span:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes typing-bounce {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1.0); }
+}
+
+.ticket-form-card {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 12px;
+  margin-top: 6px;
+  font-size: 13px;
+}
+.ticket-form-card input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 13px;
+  outline: none;
+}
+.ticket-form-card input:focus { border-color: var(--blue); }
+.ticket-form-card button {
+  background: #0284c7;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+}
+.ticket-form-card button:hover { background: #0369a1; }
+
+.chat-footer { padding: 12px; border-top: 1px solid var(--border); background: white; }
+.chat-form { display: flex; gap: 8px; }
+.chat-form input { flex: 1; min-width: 0; border: 1px solid var(--border); border-radius: 10px; padding: 12px; font-size: 14px; outline: none; }
+.chat-form input:focus { border-color: var(--blue); }
+
+.send-button { border: 0; border-radius: 10px; padding: 0 18px; background: var(--blue); color: white; font-weight: 600; cursor: pointer; }
+.send-button:hover { background: #135588; }
+.send-button:disabled { opacity: 0.55; cursor: wait; }
+
+.footer-note { margin-top: 9px; text-align: center; font-size: 11px; color: #657583; }
+
+@media (max-width: 480px) {
+  .logo-overlay { left: 80px; width: 140px; }
+  .chat-panel {
+    right: 10px;
+    bottom: 78px;
+    width: calc(100vw - 20px);
+    height: min(590px, calc(100dvh - 100px));
+  }
+  .chat-launcher { right: 14px; bottom: 14px; }
+}
+</style>
+</head>
+<body>
+
+<div class="page-background">
+  <div class="logo-overlay" aria-hidden="true">
+    <span class="bank-icon">🏛️</span>
+    <span class="bank-name">BANK DEMO</span>
+  </div>
+</div>
+
+<button id="chatLauncher" class="chat-launcher" aria-expanded="false" aria-controls="chatPanel">
+  💬 Bank Support
+</button>
+
+<section id="chatPanel" class="chat-panel" role="dialog" aria-label="Banking support chat" aria-modal="false">
+  <header class="chat-header">
+    <div class="agent">
+      <div class="agent-icon">◈</div>
+      <div>
+        <div class="agent-title">Bank Support</div>
+        <div class="secure-status">● Secure Chat · AI Assistant</div>
+      </div>
+    </div>
+    <button id="closeChat" class="close-chat" aria-label="Close chat">×</button>
+  </header>
+
+  <div id="messages" class="messages" role="log" aria-live="polite">
+    <div class="message bot">
+      Welcome to Bank Support. How can I help you with your business accounts or delegate enrollment today?
+    </div>
+  </div>
+
+  <footer class="chat-footer">
+    <form id="chatForm" class="chat-form">
+      <input id="chatInput" name="message" placeholder="Type your question..." aria-label="Your message" maxlength="2000" autocomplete="off" required>
+      <button id="sendButton" class="send-button" type="submit">Send</button>
+    </form>
+    <div class="footer-note">Never share your password, PIN, or one-time security code.</div>
+  </footer>
+</section>
+
+<script>
+const launcher = document.getElementById("chatLauncher");
+const panel = document.getElementById("chatPanel");
+const closeButton = document.getElementById("closeChat");
+const form = document.getElementById("chatForm");
+const input = document.getElementById("chatInput");
+const messages = document.getElementById("messages");
+const sendButton = document.getElementById("sendButton");
+
+let awaitingTicketConsent = false;
+
+launcher.addEventListener("click", () => {
+  const isOpen = panel.classList.toggle("open");
+  launcher.setAttribute("aria-expanded", String(isOpen));
+  if (isOpen) input.focus();
+});
+
+closeButton.addEventListener("click", () => {
+  panel.classList.remove("open");
+  launcher.setAttribute("aria-expanded", "false");
+  launcher.focus();
+});
+
+function showLoadingIndicator() {
+  const element = document.createElement("div");
+  element.className = "message bot typing";
+  element.id = "bot-typing-indicator";
+  element.innerHTML = `
+    <span>Searching knowledge base & typing answer</span>
+    <div class="typing-dots"><span></span><span></span><span></span></div>
+  `;
+  messages.appendChild(element);
+  messages.scrollTop = messages.scrollHeight;
+  return element.id;
+}
+
+function removeLoadingIndicator(indicatorId) {
+  const element = document.getElementById(indicatorId);
+  if (element) element.remove();
+}
+
+function addMessage(text, type, isHtml = false) {
+  const element = document.createElement("div");
+  element.className = `message ${type}`;
+  if (isHtml) {
+    element.innerHTML = text;
+  } else {
+    element.textContent = text;
+  }
+  messages.appendChild(element);
+  messages.scrollTop = messages.scrollHeight;
+  return element;
+}
+
+function askForTicketConsent() {
+  awaitingTicketConsent = true;
+  addMessage("It looks like you are experiencing a delegate enrollment or removal issue. Would you like me to automatically create a support ticket for you? (Please reply 'Yes' or 'No')", "bot");
+}
+
+function promptForTicketCreation() {
+  const htmlContent = `
+    Great! Please enter your details below to submit the support ticket:<br><br>
+    <div class="ticket-form-card" id="ticketCard">
+      <strong>📋 Enter Support Ticket Details</strong><br><br>
+      <input type="text" id="bizId" placeholder="Business Name / ID (e.g. Acme Corp / B-9821)" required>
+      <input type="text" id="userId" placeholder="Your User ID / Name (e.g. John Doe)" required>
+      <input type="text" id="delId" placeholder="Delegate Name / ID (e.g. Jane Smith / D-441)" required>
+      <input type="text" id="errMsg" placeholder="Error Message (e.g. Duplicate Delegate Already Exists)" required>
+      <input type="text" id="moreInfo" placeholder="Additional details or error code">
+      <button type="button" onclick="submitJiraTicket()">🚀 Submit Support Ticket</button>
+    </div>
+  `;
+  addMessage(htmlContent, "bot", true);
+}
+
+async function submitJiraTicket() {
+  const business_id = document.getElementById("bizId").value.trim();
+  const user_id = document.getElementById("userId").value.trim();
+  const delegate_id = document.getElementById("delId").value.trim();
+  const error_message = document.getElementById("errMsg").value.trim();
+  const details = document.getElementById("moreInfo").value.trim();
+
+  if (!business_id || !user_id || !delegate_id || !error_message) {
+    alert("Please fill out all required fields before submitting.");
+    return;
+  }
+
+  const card = document.getElementById("ticketCard");
+  card.innerHTML = "⏳ Submitting ticket to Jira Cloud...";
+
+  try {
+    const response = await fetch("/api/create-ticket", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ business_id, user_id, delegate_id, error_message, details })
+    });
+    
+    const data = await response.json();
+    if (response.ok && data.status === "success") {
+      card.innerHTML = `✅ <strong>Ticket Created Successfully!</strong><br>
+        Jira Ticket Reference: <a href="${data.ticket_url}" target="_blank" style="color: #0284c7; font-weight: bold; text-decoration: underline;">${data.ticket_key}</a><br>
+        <span style="font-size: 11px; color: #64748b;">Our engineering team has been notified and logged to audit traces.</span>`;
+    } else {
+      card.innerHTML = `❌ Failed to create ticket: ${JSON.stringify(data.message || "Unknown error")}`;
+    }
+  } catch (err) {
+    card.innerHTML = `❌ Network error connecting to ticketing service.`;
+    console.error(err);
+  }
+}
+
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const question = input.value.trim();
+  if (!question || sendButton.disabled) return;
+
+  addMessage(question, "user");
+  input.value = "";
+  sendButton.disabled = true;
+  input.disabled = true;
+
+  if (awaitingTicketConsent) {
+    const qLower = question.toLowerCase();
+    awaitingTicketConsent = false;
+
+    if (qLower.includes("yes") || qLower.includes("sure") || qLower.includes("okay") || qLower.includes("ok") || qLower.includes("yeah")) {
+      sendButton.disabled = false;
+      input.disabled = false;
+      input.focus();
+      promptForTicketCreation();
+      return;
+    } else {
+      addMessage("No problem! Let me know if you need help with anything else.", "bot");
+      sendButton.disabled = false;
+      input.disabled = false;
+      input.focus();
+      return;
+    }
+  }
+
+  const loadingId = showLoadingIndicator();
+
+  try {
+    const response = await fetch("/api/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      credentials: "same-origin",
+      body: JSON.stringify({ message: question })
+    });
+
+    const data = await response.json();
+    removeLoadingIndicator(loadingId);
+
+    if (!response.ok) {
+      throw new Error(data.error || "Unable to process your request.");
+    }
+
+    addMessage(data.answer || "I couldn't find an answer to that question.", "bot");
+
+    const qLower = question.toLowerCase();
+    const aLower = (data.answer || "").toLowerCase();
+    if (qLower.includes("delegate") || qLower.includes("ticket") || qLower.includes("duplicate") || aLower.includes("ticket") || aLower.includes("delegate")) {
+      setTimeout(askForTicketConsent, 600);
+    }
+  } catch (error) {
+    removeLoadingIndicator(loadingId);
+    addMessage("Sorry, I couldn't connect to support. Please try again.", "bot");
+    console.error("Chat request failed:", error);
+  } finally {
+    sendButton.disabled = false;
+    input.disabled = false;
+    input.focus();
+    messages.scrollTop = messages.scrollHeight;
+  }
+});
+</script>
+</body>
+</html>

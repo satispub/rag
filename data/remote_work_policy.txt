@@ -1,0 +1,19 @@
+Remote Work Policy — Sample Document
+
+1. Eligibility
+All full-time employees are eligible for remote work up to three days per week, subject to manager approval. New employees must complete their first 90 days on-site.
+
+2. Core hours
+Employees must be available between 10:00 and 15:00 in their local timezone. Meetings outside core hours should be minimized and recorded when possible.
+
+3. Equipment
+The company provides a laptop, monitor, and headset. A one-time home office stipend of $500 is available after six months of employment. Internet costs are reimbursed up to $60 per month.
+
+4. Security
+All work must be done on the company-managed device with disk encryption and automatic screen lock after 5 minutes. Public Wi-Fi requires the corporate VPN.
+
+5. Performance
+Remote employees are evaluated on outcomes, not hours online. Quarterly goals are set with the manager and reviewed at the end of each quarter.
+
+6. Expenses
+Travel to the office more than 50 miles from home is reimbursed at the standard mileage rate. Overnight stays require pre-approval from finance.

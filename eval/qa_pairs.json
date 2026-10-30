@@ -1,0 +1,22 @@
+[
+  {
+    "question": "How many days per week can employees work remotely?",
+    "ground_truth": "Full-time employees can work remotely up to three days per week, subject to manager approval."
+  },
+  {
+    "question": "What is the home office stipend amount and when is it available?",
+    "ground_truth": "A one-time home office stipend of $500 is available after six months of employment."
+  },
+  {
+    "question": "What are the core hours employees must be available?",
+    "ground_truth": "Employees must be available between 10:00 and 15:00 in their local timezone."
+  },
+  {
+    "question": "How is public Wi-Fi handled?",
+    "ground_truth": "Public Wi-Fi requires the corporate VPN, and work must be done on the company-managed device."
+  },
+  {
+    "question": "How are remote employees evaluated?",
+    "ground_truth": "Remote employees are evaluated on outcomes, not hours online, with quarterly goals set with the manager."
+  }
+]
